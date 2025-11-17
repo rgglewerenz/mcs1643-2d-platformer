@@ -318,9 +318,9 @@ GameObject:
   m_Component:
   - component: {fileID: 308151426}
   - component: {fileID: 308151425}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Grid
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -501,9 +501,9 @@ GameObject:
   - component: {fileID: 484128903}
   - component: {fileID: 484128902}
   - component: {fileID: 484128905}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: ThinPlatformTilemap
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1050,7 +1050,6 @@ GameObject:
   - component: {fileID: 861031407}
   - component: {fileID: 861031408}
   - component: {fileID: 861031409}
-  - component: {fileID: 861031410}
   m_Layer: 0
   m_Name: SquarePlayer
   m_TagString: Player
@@ -1072,9 +1071,9 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0
+  m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: b87edc34c4e5c5d45bde357780b4d61d, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1210,9 +1209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  deltaSpeed: 3
   jumpForce: 12
-  enemyBumpForce: 3
   groundCollider: {fileID: 861031409}
 --- !u!61 &861031409
 BoxCollider2D:
@@ -1259,27 +1256,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.34, y: 0.05}
   m_EdgeRadius: 0
---- !u!95 &861031410
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 861031403}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1194500483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1292,9 +1268,9 @@ GameObject:
   - component: {fileID: 1194500486}
   - component: {fileID: 1194500485}
   - component: {fileID: 1194500487}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Tilemap
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
