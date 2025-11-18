@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 4.0f;
     public float deltaSpeed = 3.0f;
     public float jumpForce = 12.0f;
-    public float enemyBumpForce = 3.0f;
+    public float enemyBumpForce = 10.0f;
     public BoxCollider2D groundCollider;
 
     private Rigidbody2D rb;
@@ -88,6 +88,8 @@ public class PlayerMovement : MonoBehaviour
             walking = false;
             jumping = false;
         }
+
+
         rb.velocity = vel;
 
 
@@ -145,4 +147,18 @@ public class PlayerMovement : MonoBehaviour
     {
         return groundCollider.IsTouchingLayers(LayerMask.GetMask("Ground"));
     }
+
+    public void Jump()
+    {
+        rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
+        if (!jumping)
+        {
+            //animator.Play("Jump");
+            jumping = true;
+        }
+
+        idle = false;
+        walking = false;
+    }
+    
 }
