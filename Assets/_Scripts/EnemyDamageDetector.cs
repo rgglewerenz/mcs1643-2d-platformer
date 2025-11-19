@@ -19,6 +19,7 @@ public class EnemyDamageDetector : MonoBehaviour
             {
                 playerRb.AddForce(bumpDirection * playerMovement.enemyBumpForce, ForceMode2D.Impulse);
             }
+            GameManager.SubtractLife();
         }
     }
 }

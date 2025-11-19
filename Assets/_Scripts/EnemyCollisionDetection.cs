@@ -16,6 +16,7 @@ public class EnemyCollisionDetection : MonoBehaviour
 
             Destroy(parentEnemy.gameObject);
 
+            GameManager.AddScore(100);
         }
     }
 }

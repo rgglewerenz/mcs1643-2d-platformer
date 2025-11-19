@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager._gameOver) return;
+        if (GameManager._gameOver || GameManager._paused) return;
 
         Vector3 vel = rb.velocity;
         if (Input.GetKey(KeyCode.LeftArrow))
@@ -127,19 +127,6 @@ public class PlayerMovement : MonoBehaviour
 
             rb.AddForce(forceVector * enemyBumpForce, ForceMode2D.Impulse);
 
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.transform.CompareTag("Enemy"))
-        {
-            // add points for the enemy
-            GameManager.Score += 100;
-            Debug.Log($"Killed enemy! Score is now {GameManager.Score}");
-
-            // destroy the enemy
-            Destroy(collision.gameObject);
         }
     }
 

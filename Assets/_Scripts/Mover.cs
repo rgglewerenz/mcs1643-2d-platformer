@@ -22,6 +22,7 @@ public class Mover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager._gameOver || GameManager._paused) return;
         if (!Moving)
         {
             return;
