@@ -9,5 +9,6 @@ public class ContinueButton : MonoBehaviour
     {
         PauseMenu.SetActive(false);
         Time.timeScale = 1;
+        GameManager._paused = false;
     }
 }
