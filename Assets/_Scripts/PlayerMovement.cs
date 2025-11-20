@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (!walking)
             {
-                //animator.Play("Walk");
+                animator.Play("Walk");
                 walking = true;
             }
 
@@ -69,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (!walking)
             {
-                //animator.Play("Walk");
+                animator.Play("Walk");
                 walking = true;
             }
 
@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
             vel.x = 0;
             if (!idle && !jumping && IsGrounded())
             {
-                //animator.Play("Idle");
+                animator.Play("Idle");
                 idle = true;
             }
 
@@ -98,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
             if (!jumping)
             {
-                //animator.Play("Jump");
+                animator.Play("Jump");
                 jumping = true;
             }
 
@@ -111,7 +111,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.transform.CompareTag("Ground"))
         {
-            // animator.Play("Idle");
+            animator.Play("Idle");
+            idle = true;
+            walking = false;
         }
         else if (collision.transform.CompareTag("Enemy"))
         {
@@ -140,7 +142,7 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
         if (!jumping)
         {
-            //animator.Play("Jump");
+            animator.Play("Jump");
             jumping = true;
         }
 
