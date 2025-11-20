@@ -20,8 +20,6 @@ public class Button : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Button pressed");
-        Debug.Log(other.tag);
         if (other.tag != "Player")
         {
             return;
